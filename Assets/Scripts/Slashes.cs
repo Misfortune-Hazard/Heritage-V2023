@@ -1,23 +1,29 @@
 using UnityEngine;
 using UnityEngine.U2D;
 
-public class Slashes : MonoBehaviour
+public class Slashes : Gamer
 {
-    public string alias;
-    public int durability = 35;
-    public int sharpness = 12;
-    public Sprite adminSprite;
-    public SpriteRenderer spriteRenderer;
+    public Sprite slashSprite;
+    public Switcheroo menu = new Switcheroo();
 
-    public virtual void Cut()
+    public override void Cut()
     {
-        Debug.Log(alias + " swings at the tree, dealing " + sharpness + " damage.");
+        base.Cut();
+        Debug.Log(alias + " swings, dealing " + sharpness + " damage!");
+        transform.localScale = Vector3.one * 1.1f;
     }
 
-    public void Uses(int energy)
+    public void Cut(int amount)
     {
-        durability -= energy;
-        Debug.Log("You took a swing, it took " + energy + " energy.");
+        for (int i = 0; i < amount; i++)
+        {
+            Debug.Log((i + 1) + " attack ");
+        }
+    }
+
+    public void Cut(string target)
+    {
+        Debug.Log(alias + " attacked " + target + "!");
     }
 
     void Start()
@@ -25,9 +31,9 @@ public class Slashes : MonoBehaviour
         alias = "Misha";
         sharpness = 12;
         Debug.Log(alias + " on the field!.");
-        if (spriteRenderer != null && adminSprite != null)
+        if (spriteRenderer != null && slashSprite != null)
         {
-            spriteRenderer.sprite = adminSprite;
+            spriteRenderer.sprite = slashSprite;
         }
     }
 

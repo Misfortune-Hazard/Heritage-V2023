@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Worker : Slashes
+public class Worker : Gamer
 {
     public Sprite workerSprite;
 
