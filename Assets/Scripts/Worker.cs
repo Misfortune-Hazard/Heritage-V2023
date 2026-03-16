@@ -14,8 +14,7 @@ public class Worker : Gamer
     {
         alias = "Adalbert";
         sharpness = 10;
-
-        if(spriteRenderer != null && workerSprite != null)
+    if(spriteRenderer != null && workerSprite != null)
         {
             spriteRenderer.sprite = workerSprite;
         }

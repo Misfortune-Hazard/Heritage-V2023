@@ -9,6 +9,8 @@ public class Switcheroo : MonoBehaviour
 
     private GameObject currentChar;
 
+    public Slashes namee;
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Alpha1))
@@ -23,6 +25,16 @@ public class Switcheroo : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             Gamer gamer = currentChar.GetComponent<Slashes>();
+            if (gamer != null)
+            {
+                gamer.Cut();
+            }
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Gamer gamer = currentChar.GetComponent<Worker>();
             if (gamer != null)
             {
                 gamer.Cut();

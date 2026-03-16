@@ -9,7 +9,7 @@ public class Slashes : Gamer
     public override void Cut()
     {
         base.Cut();
-        Debug.Log(alias + " swings, dealing " + sharpness + " damage!");
+        //Debug.Log(alias + " swings, dealing " + sharpness + " damage!");
         transform.localScale = Vector3.one * 1.1f;
     }
 
@@ -30,7 +30,6 @@ public class Slashes : Gamer
     {
         alias = "Misha";
         sharpness = 12;
-        Debug.Log(alias + " on the field!.");
         if (spriteRenderer != null && slashSprite != null)
         {
             spriteRenderer.sprite = slashSprite;
