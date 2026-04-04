@@ -152,7 +152,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Maximilien_Storm_Rising_Opening_0: 5247293580506229374
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

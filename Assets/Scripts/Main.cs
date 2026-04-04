@@ -22,7 +22,7 @@ public class Main : MonoBehaviour
 
         userBudget = new Budget(money);
 
-        Debug.Log("Press 1, 2 or 3 to purchase.");
+        Debug.Log("Press 4, 5 or 6 to purchase.");
 
     }
 
