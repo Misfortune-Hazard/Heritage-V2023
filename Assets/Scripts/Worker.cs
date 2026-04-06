@@ -6,7 +6,7 @@ public class Worker : Gamer
 
     public override void Cut()
     {
-        Debug.Log(alias + " swings at the tree, it dealt " + sharpness + " damage!");
+        Debug.Log(alias + " swings, it dealt " + sharpness + " damage!");
         transform.localScale = Vector3.one * 1.1f;
     }
 
