@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rock : Target
+public class Rock : Target, I2nteract
 {
     
     public Rock(string name, int health, int damage) : base(name, health, damage) { }

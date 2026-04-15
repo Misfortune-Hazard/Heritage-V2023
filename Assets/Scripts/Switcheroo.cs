@@ -11,6 +11,11 @@ public class Switcheroo : MonoBehaviour
 
     public Slashes namee;
 
+    void Start()
+    {
+        Debug.Log("Press 1 and 2 to switch characters.");
+    }
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Alpha1))
