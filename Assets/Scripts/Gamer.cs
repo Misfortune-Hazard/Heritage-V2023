@@ -20,5 +20,3 @@ public class Gamer : MonoBehaviour
         Debug.Log("You took a swing, it took " + energy + " energy.");
     }
 }
-
-    

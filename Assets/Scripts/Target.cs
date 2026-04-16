@@ -5,6 +5,8 @@ using UnityEngine;
 public abstract class Target : MonoBehaviour, IDamage
 {
 
+    public Gamer attack;
+
     protected string named;
     protected int health;
     protected int thorn;
@@ -23,13 +25,18 @@ public abstract class Target : MonoBehaviour, IDamage
         set => Mathf.Clamp(value, 0, 100);
     }
 
+    void Awake()
+    {
+        attack = GetComponent<Gamer>();
+    }
+
     public void TakeHit()
     {
-        if (thorn > 0 )
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            Health -= thorn;
-            Debug.Log(named + " took " + thorn + " damage!" + health + "HP left!");
-            if(Health <= 0 )
+            health -= thorn;
+            Debug.Log(named + " took " + thorn + " damage! " + health + " HP left!");
+            if(health <= 0 )
             {
                 DoneFor();
             }
