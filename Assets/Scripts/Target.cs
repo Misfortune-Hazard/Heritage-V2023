@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Target : MonoBehaviour, IDamage
+public abstract class Target : MonoBehaviour, IDamage, I2nteract
 {
 
     public Gamer attack;
@@ -40,6 +40,14 @@ public abstract class Target : MonoBehaviour, IDamage
             {
                 DoneFor();
             }
+        }
+    }
+
+    public void Interact()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("It's a rock. It doesn't speak.");
         }
     }
 

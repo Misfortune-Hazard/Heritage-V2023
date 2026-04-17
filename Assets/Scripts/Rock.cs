@@ -34,6 +34,7 @@ public class Rock : Target, I2nteract, IDamage
     private void Update()
     {
         dmg.TakeHit();
+        dmg.Interact();
     }
 
 }
